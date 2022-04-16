@@ -1,0 +1,19 @@
+$(".sidebar_nav_first>li").mouseover(function(){
+    $(this).find(".sidebar_nav_second").fadeIn(300);
+})
+$(".sidebar_nav_first>li").mouseleave(function(){
+    $(this).find(".sidebar_nav_second").fadeOut(300);
+})
+
+$(".btn-discuss").click(function(){
+    $(".main").addClass("small");
+    $(".discuss").addClass("active");
+    $(".discuss_inner").delay(300).fadeIn(300);
+    $(this).fadeOut(300);
+})
+$(".cross").click(function(){
+    $(".main").removeClass("small");
+    $(".discuss").removeClass("active");
+    $(".discuss_inner").fadeOut(300);
+    $(".btn-discuss").fadeIn(300);
+})
